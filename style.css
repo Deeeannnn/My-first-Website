@@ -1,0 +1,259 @@
+/* ---------------------------------------------
+   COLOR VARIABLES
+   We define colors as variables so the dark mode
+   toggle only has to change these values.
+--------------------------------------------- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --alt-bg: #f4f4f4;
+    --accent: #3a6ea5;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+/* Dark mode colors — applied when <body> has class="dark" */
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --alt-bg: #1c1c1c;
+    --accent: #7ab0e0;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* ---------------------------------------------
+   RESET & BASE STYLES
+--------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+    color: var(--accent);
+}
+
+/* ---------------------------------------------
+   HEADER / NAVIGATION
+--------------------------------------------- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.25rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#theme-toggle:hover {
+    border-color: var(--accent);
+}
+
+.popup-button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.25rem;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.popup-button:hover {
+    background-color: #2d5682;
+    transform: translateY(-2px);
+}
+
+.popup-button:active {
+    transform: translateY(0);
+}
+
+.popup-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ---------------------------------------------
+   HERO SECTION
+--------------------------------------------- */
+.hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+
+    .img-center {
+        width: 20%;
+        height: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ---------------------------------------------
+   GENERAL SECTIONS
+--------------------------------------------- */
+.section {
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+}
+
+.alt-bg {
+    background-color: var(--alt-bg);
+    max-width: 100%;
+}
+
+.alt-bg h2,
+.alt-bg .card-grid {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+/* ---------------------------------------------
+   PROJECT CARDS
+--------------------------------------------- */
+.card {
+    transition: background-color 0.5s ease, color 0.4s ease;
+}
+
+.card-grid {
+    transition: background-color 0.5s ease, color 0.4s ease;
+}
+
+.card h3 {
+    transition: color 0.5s ease, transform 0.4s ease;
+}
+
+.card-grid:hover {
+    color: var(--accent);
+}
+
+.card:hover {
+    background-color: var(--alt- rgb(36, 131, 155));
+}
+
+.card h3:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: var(--card- rgb(255, 255, 255));
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------
+   BUTTON
+--------------------------------------------- */
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.25rem;
+    background-color: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2d5682;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ---------------------------------------------
+   FOOTER
+--------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------
+   RESPONSIVE
+--------------------------------------------- */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <header class="site-header">
+        <h1 class="logo">Deanna's Website</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- This is the dark mode button -->
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <img class="img-center" src=" profile.jpg" alt="Profile Picture" class="profile-pic">
+
+        <h2>Hi, I'm Deanna 👋</h2>
+        <p>I'm learning web development, one line of code at a time.</p>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            This is a simple website built with HTML and CSS. I'm using it to
+            practice the basics — layout, styling, and a bit of JavaScript for
+            the dark mode toggle button up top.
+        </p>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="section alt-bg">
+        <h2>Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Project One</h3>
+                <p>My First Project using HTML and CSS.</p>
+            </div>
+            <div class="card">
+                <h3>Project Two</h3>
+                <p>A short description of a project goes here.</p>
+            </div>
+            <div class="card">
+                <h3>Project Three</h3>
+                <p>A short description of a project goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out any time.</p>
+        <button class="popup-button" onclick="alert('Hello, Welcome to my Website. Feel free to check my projects!')">Pop me!</button>
+        <a class="button" href="mailto:you@example.com">Say Hello</a>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Deanna Galinato. Built while learning HTML &amp; CSS.</p>
+    </footer>
+
+    <script src="promt.js"></script>
+</body>
+
+</html>
